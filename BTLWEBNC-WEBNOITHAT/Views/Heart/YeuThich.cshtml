@@ -1,0 +1,25 @@
+﻿@model IEnumerable<BTLWEBNC_WEBNOITHAT.Models.TblCtyeuThich>
+
+@{
+    ViewData["Title"] = "YeuThich";
+    Layout = "~/Views/Shared/_LayoutTrangchu.cshtml";
+}
+
+
+<div class="col-12 col-sm-12 col-lg-12">
+    <h2 class="pt-3 pb-5">Danh sách sản phẩm yêu thích</h2>
+</div>
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-3 col-sm-6 mix oranges fresh-meat">
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg" data-setbg=@Url.Content("../images/funir-images/"+item.HinhAnh) style="background-image: url(&quot;img/featured/feature-1.jpg&quot;);">
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">@item.TenSp</a></h6>
+                    <h5>@item.DonGiaBan</h5>
+                </div>
+            </div>
+        </div>
+    }
+
